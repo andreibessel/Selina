@@ -9,20 +9,30 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.List;
 
+
+
+
+
+
+
 @Test()
 public class runTest extends Base {
-   // dataProvider = "getData"
+
+
+
+    // dataProvider = "getData"
     //Objects
     public By data1=By.id("id-name-here");
 
-   // String description,String username,String password
+    public runTest() throws IOException {
+    }
+
+    // String description,String username,String password
 
         public void HomePage() throws IOException, InterruptedException, CsvValidationException {
 
@@ -31,14 +41,14 @@ public class runTest extends Base {
             By dateBoxOne=By.xpath("//div[@class='sc-elJkPf jMrnPy input sc-dNLxif gfikIx'][1]");
            By currentDate=By.cssSelector("td[class*='today']");
             By january=By.cssSelector("td[aria-label*='January']");
-          By searchboxTwo=By.cssSelector("label[for='checkOut-9']");
+          By searchboxTwo=By.xpath("//div[@class='sc-elJkPf jMrnPy input sc-dNLxif gfikIx'][2]");
             By icreaseAdult=By.cssSelector("button[aria-label*='increase']");
             By confirmButton=By.xpath("//button[@class='sc-btzYZH eJpoVB sc-EHOje gEZJMM']");
 
 
 
 
-
+Thread.sleep(10000);
       driver=initializeDriver();
 System.out.println("Acces to URL--"+prop.getProperty("url"));
        driver.get(prop.getProperty("url"));

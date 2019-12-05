@@ -3,6 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/User/Projects/Work">
     <classes>
+        <class name="Testproject.GitHubTest"/>
         <class name="Testproject.runTest">
         </class>
     </classes>
